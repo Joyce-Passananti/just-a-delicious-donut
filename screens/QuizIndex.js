@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, StatusBar } from "react-native";
 
-import spaceQuestions from "../data/space";
+import frequencyEmojis from "../data/frequencyemojis";
 import westernsQuestions from "../data/westerns";
 import computerQuestions from "../data/computers";
 
@@ -16,8 +16,8 @@ export default ({ navigation }) => (
       onPress={() =>
         navigation.navigate("Quiz", {
           title: "Emoji Test 1",
-          questions: spaceQuestions,
-          color: "#36b1f0"
+          questions: frequencyEmojis,
+          color: "#fff"
         })
       }
     />

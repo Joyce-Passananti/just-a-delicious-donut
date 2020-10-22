@@ -2,7 +2,6 @@ import React from "react";
 import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button } from "react-native";
 import * as Haptics from 'expo-haptics';
 
-
 import { AButton } from "../components/Button";
 import { Alert } from "../components/Alert";
 

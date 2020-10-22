@@ -3,15 +3,14 @@ import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Butt
 
 import { AButton, TempButton, ButtonContainer } from "../components/Button";
 import { Alert } from "../components/Alert";
-import { withNavigation } from "react-navigation";
 
-const ONE_SECOND_IN_MS = 1000;
-const PATTERN_1 = [1 * ONE_SECOND_IN_MS];
-const PATTERN_2 = [1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS];
-const PATTERN_3 = [1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS ];
-const PATTERN_4 = [1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS ];
-const PATTERN_5 = [1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS ];
-const PATTERN_6 = [1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS, 1 * ONE_SECOND_IN_MS ];
+const oneSecMs = 1000;
+const PATTERN_1 = [1 * oneSecMs];
+const PATTERN_2 = [1 * oneSecMs, 1 * oneSecMs];
+const PATTERN_3 = [1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs ];
+const PATTERN_4 = [1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs ];
+const PATTERN_5 = [1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs ];
+const PATTERN_6 = [1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs, 1 * oneSecMs ];
 
 
 const styles = StyleSheet.create({
@@ -218,9 +217,6 @@ class Quiz extends React.Component {
                   onPress={() => this.answer(true)}
                 />
           </View>
-          <Text style={styles.text}>
-            {`${this.state.correctCount}/${this.state.totalCount}`}
-          </Text>
         </SafeAreaView>
         <Alert
           correct={this.state.answerCorrect}

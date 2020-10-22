@@ -14,9 +14,9 @@ export default ({ navigation }) => (
       color="#92817a"
       onPress={() =>
         navigation.navigate("Quiz", {
-          title: "Emoji Test 1",
+          title: "Test A",
           questions: frequencyEmojis,
-          color: "#fff"
+          color: "#555"
         })
       }
     />
@@ -25,9 +25,9 @@ export default ({ navigation }) => (
       color="#92817a"
       onPress={() =>
         navigation.navigate("Quiz2", {
-          title: "Emoji Test 2",
+          title: "Test B",
           questions: frequencyEmojis2,
-          color: "#799496"
+          color: "#555"
         })
       }
     />
@@ -36,9 +36,9 @@ export default ({ navigation }) => (
       color="#92817a"
       onPress={() =>
         navigation.navigate("Quiz2", {
-          title: "Emoji Test 3",
-          questions: frequencyEmojis2, // TODO: replace
-          color: "#799496"
+          title: "Test C",
+          questions: frequencyEmojis2, // FIXME: replace
+          color: "#555"
         })
       }
     />

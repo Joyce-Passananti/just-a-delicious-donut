@@ -1,7 +1,7 @@
 const questions = [
   {
     question: "You will be asked to memorize a series of emojis through vibration. There are 6 emojis. Press start when ready.",
-    emoji: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Emoji_Icon_-_Smiling_large.png?v=1571606089',
+    emoji: '',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
     vibes: true,

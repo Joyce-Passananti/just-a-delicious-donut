@@ -38,7 +38,7 @@ export default ({ navigation }) => (
       name="Test C"
       color="#92817a"
       onPress={() =>
-        navigation.navigate("Quiz2", {
+        navigation.navigate("Quiz3", {
           title: "Test C",
           questions: frequencyEmojis3,
           color: "#c7b6af"

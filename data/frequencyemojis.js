@@ -40,7 +40,7 @@ const questions = [
   },
   {
     question: "Sad",
-    emoji: "https://cdn.shopify.com/s/files/1/1061/1924/products/Loudly_Crying_Face_Emoji_grande.png?v=1571606037",
+    emoji: "http://clipart.info/images/ccovers/1499793247facebook-sad-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
     back: {text: "Back"},
 

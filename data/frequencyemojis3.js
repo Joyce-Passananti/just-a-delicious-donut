@@ -4,8 +4,8 @@ const questions = [
     emoji: '',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
-    vibes: true,
-    phase: true,
+    vibes: false,
+    phase: false,
 
   },
   {
@@ -15,7 +15,7 @@ const questions = [
     back: {text: "Back"},
 
     vibration: "thumbsup",
-    vibes: false,
+    vibes: true,
     phase: true,
   },
   {
@@ -25,7 +25,7 @@ const questions = [
     back: {text: "Back"},
 
     vibration: "heart",
-    vibes: false,
+    vibes: true,
     phase: true,
   },
   {
@@ -36,17 +36,17 @@ const questions = [
 
     vibration: "laugh",
     phase: true,
-    vibes: false,
+    vibes: true,
   },
   {
     question: "Sad",
-    emoji: "https://cdn.shopify.com/s/files/1/1061/1924/products/Loudly_Crying_Face_Emoji_grande.png?v=1571606037",
+    emoji: "http://clipart.info/images/ccovers/1499793247facebook-sad-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
     back: {text: "Back"},
 
     vibration: "crying",
     phase: true,
-    vibes: false,
+    vibes: true,
   },
   {
     question: "Angry",
@@ -56,7 +56,7 @@ const questions = [
 
     vibration: "angry",
     phase: true,
-    vibes: false,
+    vibes: true,
   },
   {
     question: "Yay",
@@ -66,94 +66,45 @@ const questions = [
 
     vibration: "happy",
     phase: true,
-    vibes: false,
+    vibes: true,
   },
   {
-    question: "You've now seen each emoticon. If you're not confident you've memorized each emoticon, press the back button for a refresher.",
+    question: "You've now seen the touch pattern for each emoticon. If you would like to practice some more, press the back button for a refresher.",
     emoji: '',
     answers: { id: "1", text: "Continue", correct: true },
     back: {text: "Back"},
 
     vibration: "none",
-    vibes: true,
-    phase: true,
+    vibes: false,
+    phase: false,
 
   },
   {
-    question: 'Now you will be shown a vibration then asked to identify the emoticon. Press "Start" when ready.',
+    question: 'Freestyle! Now you can use the touch patterns to send emoticons. Press "Start" when ready to begin.',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
-    phase: true,
+    phase: false,
     vibes: false,
     number: 0,
 
   },
   {
-    question: "Identify the emoticon to your researcher.",
+    question: "Freestyle! Perform your touch patterns anywhere in the white area. \n\n Press reset below before sending another emoticon.",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
+    reset: true,
 
     vibration: "thumbsup",
     phase: false,
-    vibes: false,
+    vibes: true,
     number: 1,
-  },
-  {
-    question: "Identify the emoticon to your researcher.",
-    emoji: '',
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "heart",
-    phase: false,
-    vibes: false,
-    number: 2,
-  },
-  {
-    question: "Identify the emoticon to your researcher.",
-    emoji: '',
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "laugh",
-    phase: false,
-    vibes: false,
-    number: 3,
-  },
-  {
-    question: "Identify the emoticon to your researcher.",
-    emoji: '',
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "crying",
-    phase: true,
-    vibes: false,
-    number: 4,
-  },
-  {
-    question: "Identify the emoticon to your researcher.",
-    emoji: '',
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "angry",
-    phase: true,
-    vibes: false,
-    number: 5,
-  },
-  {
-    question: "Identify the emoticon to your researcher.",
-    emoji: '',
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "happy",
-    phase: true,
-    vibes: false,
-    number: 6,
   },
   {
     question: 'You\'re done with this test! Press the "Tests" button in the top left corner to go back.',
     emoji: "https://images.emojiterra.com/google/android-oreo/512px/1f389.png",
     answers: { id: "1", text: "Next", correct: true },
     vibration: "happy",
-    phase: true,
+    phase: false,
     vibes: false,
     number: 7,
   },

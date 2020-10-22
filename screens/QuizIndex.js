@@ -2,8 +2,7 @@ import React from "react";
 import { ScrollView, StatusBar } from "react-native";
 
 import frequencyEmojis from "../data/frequencyemojis";
-import westernsQuestions from "../data/westerns";
-import computerQuestions from "../data/computers";
+import frequencyEmojis2 from "../data/frequencyemojis2";
 
 import { RowItem } from "../components/RowItem";
 
@@ -22,12 +21,12 @@ export default ({ navigation }) => (
       }
     />
     <RowItem
-      name="Emoji Test 2"
+      name="Emoji Test 2 "
       color="#799496"
       onPress={() =>
-        navigation.navigate("Quiz", {
+        navigation.navigate("Quiz2", {
           title: "Emoji Test 2",
-          questions: westernsQuestions,
+          questions: frequencyEmojis2,
           color: "#799496"
         })
       }

@@ -10,7 +10,7 @@ const questions = [
   },
   {
     question: "Thumbs up",
-    emoji: "http://www.pngmart.com/files/10/Thumbs-UP-PNG-Transparent-Image.png",
+    emoji: "https://www.pinclipart.com/picdir/big/120-1206701_facebook-like-icon-facebook-like-emoji-png-clipart.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "thumbsup",
@@ -19,7 +19,7 @@ const questions = [
   },
   {
     question: "Heart",
-    emoji: "https://i.pinimg.com/originals/63/d3/8d/63d38d8cbba4335a6d28b5e19f67be8d.png",
+    emoji: "http://clipart.info/images/ccovers/1499793238facebook-love-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "heart",
@@ -28,7 +28,7 @@ const questions = [
   },
   {
     question: "Laugh",
-    emoji: "https://images.vexels.com/media/users/3/134640/isolated/preview/f2755703f8a93785225a13be336ad9c1-laugh-crying-emoji-emoticon-by-vexels.png",
+    emoji: "https://clipart.info/images/ccovers/1499793248facebook-haha.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "laugh",
@@ -37,7 +37,7 @@ const questions = [
   },
   {
     question: "Crying",
-    emoji: "https://cdn.shopify.com/s/files/1/1061/1924/products/Loudly_Crying_Face_Emoji_grande.png?v=1571606037",
+    emoji: "http://clipart.info/images/ccovers/1499793247facebook-sad-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "crying",
@@ -46,7 +46,7 @@ const questions = [
   },
   {
     question: "Angry",
-    emoji: "https://i.pinimg.com/originals/c2/0a/22/c20a2221cc2eda66004be6e80a704bd5.png",
+    emoji: "http://clipart.info/images/ccovers/1499793239facebook-angry-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "angry",
@@ -55,7 +55,7 @@ const questions = [
   },
   {
     question: "Happy",
-    emoji: "https://lh3.googleusercontent.com/proxy/EJOGBCteqqRECI2tNVvXCnareTox_3SpkRknODYgkZXAO-2E9GutFtXtRnqKGCoQJc_F5bcSWgc1w5-vUJa37xcQTP-4dcE",
+    emoji: "https://cdn150.picsart.com/upscale-245420961007212.png?r1024x1024",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "happy",
@@ -63,66 +63,11 @@ const questions = [
     vibes: false,
   },
   {
-    question: "Thumbs up",
-    emoji: "http://www.pngmart.com/files/10/Thumbs-UP-PNG-Transparent-Image.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "thumbsup",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Heart",
-    emoji: "https://i.pinimg.com/originals/63/d3/8d/63d38d8cbba4335a6d28b5e19f67be8d.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "heart",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Laugh",
-    emoji: "https://images.vexels.com/media/users/3/134640/isolated/preview/f2755703f8a93785225a13be336ad9c1-laugh-crying-emoji-emoticon-by-vexels.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "laugh",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Crying",
-    emoji: "https://cdn.shopify.com/s/files/1/1061/1924/products/Loudly_Crying_Face_Emoji_grande.png?v=1571606037",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "crying",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Angry",
-    emoji: "https://i.pinimg.com/originals/c2/0a/22/c20a2221cc2eda66004be6e80a704bd5.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "angry",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Happy",
-    emoji: "https://lh3.googleusercontent.com/proxy/EJOGBCteqqRECI2tNVvXCnareTox_3SpkRknODYgkZXAO-2E9GutFtXtRnqKGCoQJc_F5bcSWgc1w5-vUJa37xcQTP-4dcE",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "happy2",
-    phase: true,
-    vibes: false,
-  },
-  {
     question: "Now you will be shown an emoji then asked to replicate it from memory. Take the time to familiarize yourself with creating vibrations by pressing the Make Vibration button below. Press Ready when you're ready to start",
-    emoji: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Emoji_Icon_-_Smiling_large.png?v=1571606089',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
-    phase: false,
-    vibes: true,
+    phase: true,
+    vibes: false,
     number: 0,
 
   },
@@ -132,8 +77,8 @@ const questions = [
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "thumbsup",
-    phase: false,
-    vibes: true,
+    phase: true,
+    vibes: false,
     number: 1,
   },
   {
@@ -142,8 +87,8 @@ const questions = [
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "heart",
-    phase: false,
-    vibes: true,
+    phase: true,
+    vibes: false,
     number: 2,
   },
   {
@@ -152,8 +97,8 @@ const questions = [
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "laugh",
-    phase: false,
-    vibes: true,
+    phase: true,
+    vibes: false,
     number: 3,
   },
   {
@@ -162,8 +107,8 @@ const questions = [
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "crying",
-    phase: false,
-    vibes: true,
+    phase: true,
+    vibes: false,
     number: 4,
   },
   {
@@ -172,8 +117,8 @@ const questions = [
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "angry",
-    phase: false,
-    vibes: true,
+    phase: true,
+    vibes: false,
     number: 5,
   },
   {
@@ -182,8 +127,8 @@ const questions = [
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "happy",
-    phase: false,
-    vibes: true,
+    phase: true,
+    vibes: false,
     number: 6,
   },
   {
@@ -192,7 +137,7 @@ const questions = [
     answers: { id: "1", text: "Next", correct: true },
     vibration: "happy",
     phase: true,
-    vibes: true,
+    vibes: false,
     number: 7,
   },
 ];

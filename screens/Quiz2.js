@@ -1,9 +1,8 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button, LogBox} from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button} from "react-native";
 import * as Haptics from 'expo-haptics';
 
 import { AButton } from "../components/Button";
-import { Alert } from "../components/Alert";
 
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
@@ -258,11 +257,6 @@ class Quiz2 extends React.Component {
                   onPress={() => this.goBack()}
                 />
             </View> : <></>}
-            <View>
-              {this.state.finalResults && 
-              <Text style={styles.text}>{this.state.clicks1},{this.state.clicks2},{this.state.clicks3},{this.state.clicks4},{this.state.clicks5},{this.state.clicks6} </Text>
-              }
-              </View>
             {this.state.activeQuestionIndex < 15 ?
             <View>
                 <AButton

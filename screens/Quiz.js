@@ -1,8 +1,10 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button} from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button, LogBox} from "react-native";
 
 import { AButton } from "../components/Button";
 import { Alert } from "../components/Alert";
+
+LogBox.ignoreAllLogs();
 
 const oneSecMs = 1000;
 const PATTERN_1 = [1 * oneSecMs];

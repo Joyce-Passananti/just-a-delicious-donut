@@ -1,11 +1,13 @@
 import React from "react";
-import { ScrollView, StatusBar } from "react-native";
+import { ScrollView, StatusBar, LogBox } from "react-native";
 
 import frequencyEmojis from "../data/frequencyemojis";
 import frequencyEmojis2 from "../data/frequencyemojis2";
 import frequencyEmojis3 from "../data/frequencyemojis3";
 
 import { RowItem } from "../components/RowItem";
+
+LogBox.ignoreAllLogs();
 
 export default ({ navigation }) => (
   <ScrollView>

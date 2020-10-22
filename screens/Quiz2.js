@@ -1,8 +1,10 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button} from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button, LogBox} from "react-native";
 import * as Haptics from 'expo-haptics';
 
 import { AButton } from "../components/Button";
+
+LogBox.ignoreAllLogs();
 
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {

@@ -185,11 +185,14 @@ class Quiz extends React.Component {
           { backgroundColor: this.props.navigation.getParam("color") }
         ]}
       >
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="dark-content" />
         <SafeAreaView style={styles.safearea}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
-          <Image source={{uri: question.emoji}}
-       style={{width: 300, height: 300, justifyContent: 'center', alignItems: 'center'}} />
+          {question.emoji ? 
+            <Image source={{uri: question.emoji}}
+            style={{width: 300, height: 300, justifyContent: 'center', alignItems: 'center'}} />
+            : <></>
+            }
             <Text style={styles.text}>{question.question}</Text></View>
             <View style={styles.button}>
               {this.state.buttonDisabled && <Button

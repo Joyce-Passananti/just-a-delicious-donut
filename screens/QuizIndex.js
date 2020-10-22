@@ -16,7 +16,7 @@ export default ({ navigation }) => (
         navigation.navigate("Quiz", {
           title: "Test A",
           questions: frequencyEmojis,
-          color: "#555"
+          color: "#c7b6af"
         })
       }
     />
@@ -27,7 +27,7 @@ export default ({ navigation }) => (
         navigation.navigate("Quiz2", {
           title: "Test B",
           questions: frequencyEmojis2,
-          color: "#555"
+          color: "#c7b6af"
         })
       }
     />
@@ -38,7 +38,7 @@ export default ({ navigation }) => (
         navigation.navigate("Quiz2", {
           title: "Test C",
           questions: frequencyEmojis2, // FIXME: replace
-          color: "#555"
+          color: "#c7b6af"
         })
       }
     />

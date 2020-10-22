@@ -3,6 +3,7 @@ import { ScrollView, StatusBar } from "react-native";
 
 import frequencyEmojis from "../data/frequencyemojis";
 import frequencyEmojis2 from "../data/frequencyemojis2";
+import frequencyEmojis3 from "../data/frequencyemojis3";
 
 import { RowItem } from "../components/RowItem";
 
@@ -37,7 +38,7 @@ export default ({ navigation }) => (
       onPress={() =>
         navigation.navigate("Quiz2", {
           title: "Test C",
-          questions: frequencyEmojis2, // FIXME: replace
+          questions: frequencyEmojis3,
           color: "#c7b6af"
         })
       }

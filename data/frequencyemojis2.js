@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "You will be asked to memorize a series of emojis through vibration. There are 6 emojis. Press start when ready.",
+    question: "You will be asked to memorize a series of emoticons through vibration. There are 6 emoticons. Press start when ready.",
     emoji: '',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
@@ -9,36 +9,40 @@ const questions = [
 
   },
   {
-    question: "Thumbs up",
+    question: "Like",
     emoji: "https://www.pinclipart.com/picdir/big/120-1206701_facebook-like-icon-facebook-like-emoji-png-clipart.png",
     answers: { id: "1", text: "Next", correct: true },
+    back: {text: "Back"},
 
     vibration: "thumbsup",
     vibes: false,
     phase: true,
   },
   {
-    question: "Heart",
+    question: "Love",
     emoji: "http://clipart.info/images/ccovers/1499793238facebook-love-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
+    back: {text: "Back"},
 
     vibration: "heart",
     vibes: false,
     phase: true,
   },
   {
-    question: "Laugh",
+    question: "Haha",
     emoji: "https://clipart.info/images/ccovers/1499793248facebook-haha.png",
     answers: { id: "1", text: "Next", correct: true },
+    back: {text: "Back"},
 
     vibration: "laugh",
     phase: true,
     vibes: false,
   },
   {
-    question: "Crying",
+    question: "Sad",
     emoji: "http://clipart.info/images/ccovers/1499793247facebook-sad-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
+    back: {text: "Back"},
 
     vibration: "crying",
     phase: true,
@@ -48,22 +52,35 @@ const questions = [
     question: "Angry",
     emoji: "http://clipart.info/images/ccovers/1499793239facebook-angry-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
+    back: {text: "Back"},
 
     vibration: "angry",
     phase: true,
     vibes: false,
   },
   {
-    question: "Happy",
+    question: "Yay",
     emoji: "https://cdn150.picsart.com/upscale-245420961007212.png?r1024x1024",
     answers: { id: "1", text: "Next", correct: true },
+    back: {text: "Back"},
 
     vibration: "happy",
     phase: true,
     vibes: false,
   },
   {
-    question: "Now you will be shown an emoji then asked to replicate it from memory. Take the time to familiarize yourself with creating vibrations by pressing the Make Vibration button below. Press Ready when you're ready to start",
+    question: "You've now seen each emoticon. If you're not confident you've memorized each emoticon, press the back button for a refresher.",
+    emoji: '',
+    answers: { id: "1", text: "Continue", correct: true },
+    back: {text: "Back"},
+
+    vibration: "none",
+    vibes: true,
+    phase: true,
+
+  },
+  {
+    question: 'Now you will be shown a vibration then asked to identify the emoticon. Press "Start" when ready.',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
     phase: true,
@@ -72,38 +89,38 @@ const questions = [
 
   },
   {
-    question: "Thumbs up",
-    emoji: "https://lh3.googleusercontent.com/proxy/FU6yPA1p91VgbLSVbmudQzxdc03MrVDfVXKQyxG19lP9X7idD2v-WaRUZDjHDgSbIkhvoSq3NWUb5IfqIp2OfTLc6-X1RXIcOMaNthV5ShSO2hV8wOoe7Afbrw",
+    question: "Identify the emoticon to your researcher.",
+    emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "thumbsup",
-    phase: true,
+    phase: false,
     vibes: false,
     number: 1,
   },
   {
-    question: "Heart",
-    emoji: "https://i.pinimg.com/originals/63/d3/8d/63d38d8cbba4335a6d28b5e19f67be8d.png",
+    question: "Identify the emoticon to your researcher.",
+    emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "heart",
-    phase: true,
+    phase: false,
     vibes: false,
     number: 2,
   },
   {
-    question: "Laugh",
-    emoji: "https://images.vexels.com/media/users/3/134640/isolated/preview/f2755703f8a93785225a13be336ad9c1-laugh-crying-emoji-emoticon-by-vexels.png",
+    question: "Identify the emoticon to your researcher.",
+    emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "laugh",
-    phase: true,
+    phase: false,
     vibes: false,
     number: 3,
   },
   {
-    question: "Crying",
-    emoji: "https://cdn.shopify.com/s/files/1/1061/1924/products/Loudly_Crying_Face_Emoji_grande.png?v=1571606037",
+    question: "Identify the emoticon to your researcher.",
+    emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "crying",
@@ -112,8 +129,8 @@ const questions = [
     number: 4,
   },
   {
-    question: "Angry",
-    emoji: "https://i.pinimg.com/originals/c2/0a/22/c20a2221cc2eda66004be6e80a704bd5.png",
+    question: "Identify the emoticon to your researcher.",
+    emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "angry",
@@ -122,8 +139,8 @@ const questions = [
     number: 5,
   },
   {
-    question: "Happy",
-    emoji: "https://lh3.googleusercontent.com/proxy/EJOGBCteqqRECI2tNVvXCnareTox_3SpkRknODYgkZXAO-2E9GutFtXtRnqKGCoQJc_F5bcSWgc1w5-vUJa37xcQTP-4dcE",
+    question: "Identify the emoticon to your researcher.",
+    emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "happy",
@@ -132,7 +149,7 @@ const questions = [
     number: 6,
   },
   {
-    question: "You're done! Please screenshot and send us these results.",
+    question: 'You\'re done with this test! Press the "Tests" button in the top left corner to go back.',
     emoji: "https://images.emojiterra.com/google/android-oreo/512px/1f389.png",
     answers: { id: "1", text: "Next", correct: true },
     vibration: "happy",

@@ -1,13 +1,22 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Vibration, Image, Button, LogBox} from "react-native";
 import * as Haptics from 'expo-haptics';
 
 import { AButton } from "../components/Button";
 import { Alert } from "../components/Alert";
 
-function sleep (ms) {
-  return new Promise(resolve => setTimeout(resolve, ms))
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
+
+const randFirst = shuffle([1, 2, 3, 4, 5, 6]);
+const randSecond = shuffle([9, 10, 11, 12, 13, 14]);
+
+const order = [0].concat(randFirst, [7, 8], randSecond, [15])
 
 const styles = StyleSheet.create({
   container: {
@@ -32,12 +41,12 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "center",
-    width: "100%",
-    marginTop: 20
+    width: "100%"
   }
 });
 
 class Quiz2 extends React.Component {
+
   state = {
     correctCount: 0,
     totalCount: this.props.navigation.getParam("questions", []).length,
@@ -45,6 +54,7 @@ class Quiz2 extends React.Component {
     answered: false,
     answerCorrect: false,
     buttonDisabled: false,
+    backButton: false,
     createVibrationz: false,
     finalResults: false,
     clicks1: 0,
@@ -75,24 +85,52 @@ class Quiz2 extends React.Component {
     );
   };
 
+  goBack = () => {
+    let lastIndex;
+    this.setState(
+      state => {
+        lastIndex = state.activeQuestionIndex - 1;
+        this.setState({
+          buttonDisabled: true,
+          activeQuestionIndex: lastIndex,
+          answered: false,
+        }) 
+        if (lastIndex == 1) {
+          this.setState({
+            backButton: false,
+          }) 
+        }
+      },
+    );
+  }
+
   nextQuestion = () => {
     console.log(this.state.clicks1);
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
+      this.setState({
+        buttonDisabled: true,
+        backButton: false,
+      })    
+
+      if (nextIndex >= 2 && nextIndex <= 7) {
+        this.setState({
+          backButton: true,
+        })    
+      }
       if (nextIndex >= state.totalCount) {
         this.props.navigation.popToTop();
       }
-      if (nextIndex == 1){
+      if (nextIndex == 0 || nextIndex == 7 || nextIndex == 8){
         this.setState({
-          buttonDisabled: true,
+          buttonDisabled: false,
         })        
       }
-      if(nextIndex == 20){
+      if(nextIndex == 15){
         this.setState({
           buttonDisabled: false,
           createVibrationz: false,
-          finalResults: true,
         })          
       }
 
@@ -178,7 +216,9 @@ class Quiz2 extends React.Component {
 
   render() {
     const questions = this.props.navigation.getParam("questions", []);
-    const question = questions[this.state.activeQuestionIndex];
+    const activeQ = this.state.activeQuestionIndex;
+    const question = questions[order[activeQ]];
+    
     return (
       <View
         style={[
@@ -190,42 +230,48 @@ class Quiz2 extends React.Component {
         <SafeAreaView style={styles.safearea}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
           {question.emoji ? <Image source={{uri: question.emoji}}
-            style={{width: 300, height: 300, justifyContent: 'center', alignItems: 'center'}} />: null}
-            <Text style={styles.text}>{question.question}</Text></View>
-            <View style={styles.button}>
-              {this.state.buttonDisabled && <Button
+            style={{width: 300, height: 300, marginBottom: 20, justifyContent: 'center', alignItems: 'center'}} />: null}
+            <Text style={styles.text}>
+              {(activeQ >= 9 && activeQ < 15) ?
+              `${activeQ - 8}/6: ${question.question}` : question.question}
+            </Text></View>
+            {this.state.buttonDisabled && <View style={styles.button}>
+              <Button
                   disabled = {question.vibes}
                   color = "#fff"
                   title="Feel Vibration"
                   onPress={() => this.vibrateIt(question.vibration)}
-                /> }
-                </View><View style={styles.button}>
-                {this.state.createVibrationz && <Button
+                /> 
+            </View>}
+            {this.state.createVibrationz && <View style={styles.button}>
+                <Button
                   disabled = {question.phase}
                   title="Make Vibration"
                   onPress={() => this.createVibration(question.number)}
-                />}
-            </View>
+                />
+            </View>}
+            {question.hasOwnProperty("back") && this.state.backButton ? 
+              <View style={styles.button}>
+              <Button
+                  color = "#fff"
+                  title={question.back.text}
+                  onPress={() => this.goBack()}
+                />
+            </View> : <></>}
             <View>
               {this.state.finalResults && 
               <Text style={styles.text}>{this.state.clicks1},{this.state.clicks2},{this.state.clicks3},{this.state.clicks4},{this.state.clicks5},{this.state.clicks6} </Text>
               }
               </View>
+            {this.state.activeQuestionIndex < 15 ?
             <View>
                 <AButton
                   key={question.answers.id}
                   text={question.answers.text}
                   onPress={() => this.answer(true)}
                 />
-          </View>
-          <Text style={styles.text}>
-            {`${this.state.correctCount}/${this.state.totalCount}`}
-          </Text>
+          </View> : <></>}
         </SafeAreaView>
-        <Alert
-          correct={this.state.answerCorrect}
-          visible={this.state.answered}
-        />
       </View>
     );
   }

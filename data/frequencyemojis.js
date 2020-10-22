@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "You will be asked to memorize a series of emojis through vibration. There are 6 emojis. Press start when ready.",
+    question: "You will be asked to memorize a series of emoticons through vibration. There are 6 emoticons. Press start when ready.",
     emoji: '',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
@@ -9,8 +9,8 @@ const questions = [
 
   },
   {
-    question: "Thumbs up",
-    emoji: "http://www.pngmart.com/files/10/Thumbs-UP-PNG-Transparent-Image.png",
+    question: "Like",
+    emoji: "https://www.pinclipart.com/picdir/big/120-1206701_facebook-like-icon-facebook-like-emoji-png-clipart.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "thumbsup",
@@ -18,8 +18,8 @@ const questions = [
     phase: true,
   },
   {
-    question: "Heart",
-    emoji: "https://i.pinimg.com/originals/63/d3/8d/63d38d8cbba4335a6d28b5e19f67be8d.png",
+    question: "Love",
+    emoji: "http://clipart.info/images/ccovers/1499793238facebook-love-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "heart",
@@ -27,8 +27,8 @@ const questions = [
     phase: true,
   },
   {
-    question: "Laugh",
-    emoji: "https://images.vexels.com/media/users/3/134640/isolated/preview/f2755703f8a93785225a13be336ad9c1-laugh-crying-emoji-emoticon-by-vexels.png",
+    question: "Haha",
+    emoji: "https://clipart.info/images/ccovers/1499793248facebook-haha.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "laugh",
@@ -36,7 +36,7 @@ const questions = [
     vibes: false,
   },
   {
-    question: "Crying",
+    question: "Sad",
     emoji: "https://cdn.shopify.com/s/files/1/1061/1924/products/Loudly_Crying_Face_Emoji_grande.png?v=1571606037",
     answers: { id: "1", text: "Next", correct: true },
 
@@ -46,7 +46,7 @@ const questions = [
   },
   {
     question: "Angry",
-    emoji: "https://i.pinimg.com/originals/c2/0a/22/c20a2221cc2eda66004be6e80a704bd5.png",
+    emoji: "http://clipart.info/images/ccovers/1499793239facebook-angry-emoji-like-png.png",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "angry",
@@ -54,65 +54,11 @@ const questions = [
     vibes: false,
   },
   {
-    question: "Happy",
-    emoji: "https://lh3.googleusercontent.com/proxy/EJOGBCteqqRECI2tNVvXCnareTox_3SpkRknODYgkZXAO-2E9GutFtXtRnqKGCoQJc_F5bcSWgc1w5-vUJa37xcQTP-4dcE",
+    question: "Yay",
+    emoji: "https://cdn150.picsart.com/upscale-245420961007212.png?r1024x1024",
     answers: { id: "1", text: "Next", correct: true },
 
     vibration: "happy",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Thumbs up",
-    emoji: "http://www.pngmart.com/files/10/Thumbs-UP-PNG-Transparent-Image.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "thumbsup",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Heart",
-    emoji: "https://i.pinimg.com/originals/63/d3/8d/63d38d8cbba4335a6d28b5e19f67be8d.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "heart",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Laugh",
-    emoji: "https://images.vexels.com/media/users/3/134640/isolated/preview/f2755703f8a93785225a13be336ad9c1-laugh-crying-emoji-emoticon-by-vexels.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "laugh",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Crying",
-    emoji: "https://cdn.shopify.com/s/files/1/1061/1924/products/Loudly_Crying_Face_Emoji_grande.png?v=1571606037",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "crying",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Angry",
-    emoji: "https://i.pinimg.com/originals/c2/0a/22/c20a2221cc2eda66004be6e80a704bd5.png",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "angry",
-    phase: true,
-    vibes: false,
-  },
-  {
-    question: "Happy",
-    emoji: "https://lh3.googleusercontent.com/proxy/EJOGBCteqqRECI2tNVvXCnareTox_3SpkRknODYgkZXAO-2E9GutFtXtRnqKGCoQJc_F5bcSWgc1w5-vUJa37xcQTP-4dcE",
-    answers: { id: "1", text: "Next", correct: true },
-
-    vibration: "happy2",
     phase: true,
     vibes: false,
   },

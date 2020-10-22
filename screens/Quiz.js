@@ -190,7 +190,7 @@ class Quiz extends React.Component {
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
           {question.emoji ? 
             <Image source={{uri: question.emoji}}
-            style={{width: 300, height: 300, justifyContent: 'center', alignItems: 'center'}} />
+            style={{width: 300, height: 300, marginBottom: 20, justifyContent: 'center', alignItems: 'center'}} />
             : <></>
             }
             <Text style={styles.text}>{question.question}</Text></View>

@@ -4,6 +4,7 @@ import QuizIndex from "./screens/QuizIndex";
 import Quiz from "./screens/Quiz";
 import Quiz2 from "./screens/Quiz2";
 import Quiz3 from "./screens/Quiz3";
+import {useEffect} from 'react';
 
 const MainStack = createStackNavigator({
   QuizIndex: {

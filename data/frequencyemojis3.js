@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "You will be asked to memorize a series of emoticons through vibration. There are 6 emoticons. Press start when ready.",
+    question: "You will be asked to memorize 6 touch patterns to send emoticons. There is one touch pattern for each emoticon. Press start when ready.",
     emoji: '',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",

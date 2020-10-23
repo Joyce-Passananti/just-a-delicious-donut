@@ -22,8 +22,9 @@ function shuffle(a) {
 }
 
 const randFirst = shuffle([1, 2, 3, 4, 5, 6]);
+const randLast = shuffle([9, 10, 11, 12, 13, 14]);
 
-const order = [0].concat(randFirst, [7, 8, 9, 10])
+const order = [0].concat(randFirst, [7, 8], randLast, 15)
 
 const styles = StyleSheet.create({
   container: {
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
 
 class Quiz3 extends React.Component {
   state = {
+    result: 0,
     correctCount: 0,
     totalCount: this.props.navigation.getParam("questions", []).length,
     activeQuestionIndex: 0,
@@ -85,26 +87,17 @@ class Quiz3 extends React.Component {
     backButton: false,
     createVibrationz: false,
     finalResults: false,
-    clicks1: 0,
-    clicks2: 0,
-    clicks3: 0,
-    clicks4: 0,
-    clicks5: 0,
-    clicks6: 0, 
     clicks: 0
   };
 
-  answer = correct => {
+  answer = test => {
     this.setState(
       state => {
         const nextState = { answered: true };
 
-        if (correct) {
-          nextState.correctCount = state.correctCount + 1;
-          nextState.answerCorrect = true;
-        } else {
-          nextState.answerCorrect = false;
-        }
+        console.log(test)
+        if (test == state.clicks)
+          nextState.result = state.result + 1
 
         return nextState;
       },
@@ -135,7 +128,7 @@ class Quiz3 extends React.Component {
   }
 
   nextQuestion = () => {
-    console.log(this.state.clicks1);
+    console.log(this.state.clicks);
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
@@ -169,8 +162,6 @@ class Quiz3 extends React.Component {
   };
   
   vibrateIt = vibration => {
-    console.log("makingit");
-    console.log(vibration);
     if(vibration == "thumbsup"){
       Vibration.vibrate(PATTERN_1);
     }
@@ -189,31 +180,16 @@ class Quiz3 extends React.Component {
     }
     else if(vibration == "happy"){
       Vibration.vibrate(PATTERN_6);
-    }    
-    else if(vibration == "happy2"){
-      Vibration.vibrate(PATTERN_6);
-      this.setState({
-        buttonDisabled: false,
-        createVibrationz: true,
-      })
-    }    
+    } 
   }
 
   createVibration = input => {
     if (input == true) {
-      console.log(this.state.clicks + 1)
       this.setState({
         clicks: this.state.clicks + 1,
       })  
       Vibration.vibrate(1000);
     }
-  }
-
-  resetClicks = () => {
-    console.log("reset");
-    this.setState({
-      clicks: 0,
-    });
   }
 
   render() {
@@ -250,6 +226,9 @@ class Quiz3 extends React.Component {
           <View style={styles.middle}
             onTouchStart={() => this.createVibration(question.vibes)}
           >
+              <Text style={styles.text}>
+              {question.hasOwnProperty("number") ? this.state.result + "/6 Correct" : null}
+              </Text>
             {question.emoji ? 
               <Image source={{uri: question.emoji}}
               style={{width: 300, height: 300, marginBottom: 20, justifyContent: 'center', alignItems: 'center'}} />
@@ -260,13 +239,6 @@ class Quiz3 extends React.Component {
                 {question.question}
               </Text>
               </View>
-              {this.state.createVibrationz && <View style={styles.button}>
-                  <Button
-                    disabled = {question.phase}
-                    title="Make Vibration"
-                    onPress={() => this.createVibration(question.number)}
-                  />
-              </View>}
           </View>
           <View style={styles.bottom}>
             {question.hasOwnProperty("back") && this.state.backButton ? 
@@ -277,22 +249,15 @@ class Quiz3 extends React.Component {
                   onPress={() => this.goBack()}
                 />
             </View> : <></>}
-            {question.hasOwnProperty("reset") ? 
-              <View style={styles.button}>
-              <Button
-                  color = "#fff"
-                  title="Reset"
-                  onPress={() => this.resetClicks()}
-                />
-            </View> : <></>}
-            {this.state.activeQuestionIndex < 10 ?
-            <View style = {{width: '100%'}}>
+            {question.hasOwnProperty("number") ? <></> : 
+              <View style = {{width: '100%'}}>
                 <AButton
                   key={question.answers.id}
                   text={question.answers.text}
-                  onPress={() => this.answer(true)}
+                  onPress={question.hasOwnProperty("test") ? () => this.answer(question.test)
+                  : () => this.answer(-1)}
                 />
-          </View> : <></>}
+              </View>}
           </View>
         </SafeAreaView>
       </View>

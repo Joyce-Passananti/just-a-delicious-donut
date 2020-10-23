@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "NewAppLication",
+    "name": "EyesFreeEmojiMessaging",
     "slug": "NewApp",
     "privacy": "public",
     "platforms": [
@@ -24,6 +24,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": ""
   }
 }

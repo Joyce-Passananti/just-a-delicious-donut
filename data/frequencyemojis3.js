@@ -80,24 +80,66 @@ const questions = [
 
   },
   {
-    question: 'Freestyle! Now you can use the touch patterns to send emoticons. Press "Start" when ready to begin.',
+    question: 'Test it out! Use the touch patterns to send emoticons. Press "Start" when ready to begin.',
     answers: { id: "1", text: "Start", correct: true },
     vibration: "none",
     phase: false,
     vibes: false,
-    number: 0,
-
   },
   {
-    question: "Freestyle! Perform your touch patterns anywhere in the white area. \n\n Press reset below before sending another emoticon.",
-    emoji: '',
+    question: "Perform the touch pattern for this emoticon anywhere in the white area. \n\n Press Next to send your emoticon",
+    emoji: 'https://www.pinclipart.com/picdir/big/120-1206701_facebook-like-icon-facebook-like-emoji-png-clipart.png',
     answers: { id: "1", text: "Next", correct: true },
-    reset: true,
-
     vibration: "thumbsup",
     phase: false,
     vibes: true,
-    number: 1,
+    test: 1
+
+  },
+  {
+    question: "Perform the touch pattern for this emoticon anywhere in the white area. \n\n Press Next to send your emoticon",
+    emoji: 'http://clipart.info/images/ccovers/1499793238facebook-love-emoji-like-png.png',
+    answers: { id: "1", text: "Next", correct: true },
+    vibration: "heart",
+    phase: false,
+    vibes: true,
+    test: 2
+  },
+  {
+    question: "Perform the touch pattern for this emoticon anywhere in the white area. \n\n Press Next to send your emoticon",
+    emoji: 'https://clipart.info/images/ccovers/1499793248facebook-haha.png',
+    answers: { id: "1", text: "Next", correct: true },
+    vibration: "laugh",
+    phase: false,
+    vibes: true,
+    test: 3
+  },
+  {
+    question: "Perform the touch pattern for this emoticon anywhere in the white area. \n\n Press Next to send your emoticon",
+    emoji: 'http://clipart.info/images/ccovers/1499793247facebook-sad-emoji-like-png.png',
+    answers: { id: "1", text: "Next", correct: true },
+    vibration: "crying",
+    phase: false,
+    vibes: true,
+    test: 4
+  },
+  {
+    question: "Perform the touch pattern for this emoticon anywhere in the white area. \n\n Press Next to send your emoticon",
+    emoji: 'http://clipart.info/images/ccovers/1499793239facebook-angry-emoji-like-png.png',
+    answers: { id: "1", text: "Next", correct: true },
+    vibration: "angry",
+    phase: false,
+    vibes: true,
+    test: 5
+  },
+  {
+    question: "Perform the touch pattern for this emoticon anywhere in the white area. \n\n Press Next to send your emoticon",
+    emoji: 'https://cdn150.picsart.com/upscale-245420961007212.png?r1024x1024',
+    answers: { id: "1", text: "Next", correct: true },
+    vibration: "wow",
+    phase: false,
+    vibes: true,
+    test: 6
   },
   {
     question: 'You\'re done with this test! Press the "Tests" button in the top left corner to go back.',
@@ -106,7 +148,7 @@ const questions = [
     vibration: "happy",
     phase: false,
     vibes: false,
-    number: 7,
+    number: 2
   },
 ];
 

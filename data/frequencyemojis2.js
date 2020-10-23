@@ -89,7 +89,7 @@ const questions = [
 
   },
   {
-    question: "Identify the emoticon to your researcher.",
+    question: "Identify the emoticon to your researcher.\n\n QCode: A1A",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
@@ -99,7 +99,7 @@ const questions = [
     number: 1,
   },
   {
-    question: "Identify the emoticon to your researcher.",
+    question: "Identify the emoticon to your researcher.\n\n QCode: Y2E",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
@@ -109,7 +109,7 @@ const questions = [
     number: 2,
   },
   {
-    question: "Identify the emoticon to your researcher.",
+    question: "Identify the emoticon to your researcher.\n\n QCode: JH3",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
@@ -119,7 +119,7 @@ const questions = [
     number: 3,
   },
   {
-    question: "Identify the emoticon to your researcher.",
+    question: "Identify the emoticon to your researcher.\n\n QCode: OPT",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
@@ -129,7 +129,7 @@ const questions = [
     number: 4,
   },
   {
-    question: "Identify the emoticon to your researcher.",
+    question: "Identify the emoticon to your researcher.\n\n QCode: G5N",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
@@ -139,7 +139,7 @@ const questions = [
     number: 5,
   },
   {
-    question: "Identify the emoticon to your researcher.",
+    question: "Identify the emoticon to your researcher.\n\n QCode: 6VS",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 

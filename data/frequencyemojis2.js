@@ -119,7 +119,7 @@ const questions = [
     number: 3,
   },
   {
-    question: "Identify the emoticon to your researcher.\n\n QCode: OPT",
+    question: "Identify the emoticon to your researcher.\n\n QCode: 4PT",
     emoji: '',
     answers: { id: "1", text: "Next", correct: true },
 
